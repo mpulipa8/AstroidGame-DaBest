@@ -15,7 +15,7 @@ public class Asteroid extends Applet implements ActionListener
         Xinc=x;
         Yinc=y;
     }
-
+    
     public void move()
     {
         if(collidesX() || collidesY()){
@@ -40,6 +40,7 @@ public class Asteroid extends Applet implements ActionListener
         }
         return false;
     }
+    
     private boolean collidesY(){
         if(Ay==0 || Ay==1000){
             return true;
