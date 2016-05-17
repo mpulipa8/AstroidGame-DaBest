@@ -17,14 +17,17 @@ public class ActionExample extends Applet implements ActionListener
     }  
     public void paint(Graphics g) 
     { 
-       this.resize(650,450);
        BufferedImage ss=null;
+       BufferedImage sss=null;
        try{
            ss=ImageIO.read(new File("aster.jpg"));
         }catch(IOException e){
         }
-       g.setColor(Color.black);
-       g.fillRect(0, 0, 800,800);
+       try{
+          sss=ImageIO.read(new File("stars_texture2959.jpg"));
+       }catch(IOException e){
+       }      
+       g.drawImage(sss,0,0,this);
        g.setFont(new Font("TimesRoman", Font.PLAIN, 90)); 
        g.setColor(Color.white);
        g.drawString("Asteroids", 200, 200);
