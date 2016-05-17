@@ -19,7 +19,7 @@ public class Asteroid extends Applet implements ActionListener
     public void move()
     {
         if(collidesX() || collidesY()){
-            Xinc*=-1;
+            Xinc=0-Xinc;
         }
         Ax+=Xinc;
         Ay+=Yinc;
