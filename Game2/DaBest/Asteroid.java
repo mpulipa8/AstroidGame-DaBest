@@ -41,7 +41,7 @@ public class Asteroid extends Applet implements ActionListener
         return Ax;
     }
     
-    public int getX(){
+    public int getY(){
         return Ay ;
     }
     

@@ -1,6 +1,7 @@
 public class Spaceship 
 {
-    int Sx, Sy; //Spaceship Position
+    int Sx=0;
+    int Sy=0; //Spaceship Position
     
     int Sincx, Sinxy; // Spaceship Moving speed
     
