@@ -20,22 +20,23 @@ public class menu extends JPanel
         super.paintComponent(g);
 
         try{
-            ss=ImageIO.read(new File("aster.jpg"));
+            ss=ImageIO.read(new File("8TEjdMaGc.png"));
         }catch(IOException e){
         }
         try{
             sss=ImageIO.read(new File("starfield.gif"));
         }catch(IOException e){
         }   
+       
         g.drawImage(sss,0,0,this);
        g.setFont(new Font("TimesRoman", Font.PLAIN, 90)); 
        g.setColor(Color.white);
-       g.drawString("Asteroids", 200, 200);
+       g.drawString("Asteroids", 300, 300);
        g.setFont(new Font("TimesRoman", Font.PLAIN, 20)); 
        g.setColor(Color.white);
-       g.drawString("Created by: Siddharth Nair, Ojas Rade, Mauryaaditya Puplipati, Adam Kastler", 70, 300);
-       g.drawImage(ss,100,400,this);
-
+       g.drawString("Created by: Siddharth Nair, Ojas Rade, Mauryaaditya Puplipati, Adam Kastler", 150, 400);
+       g.drawImage(ss,100,401,this);
+       
     }
 
 }
