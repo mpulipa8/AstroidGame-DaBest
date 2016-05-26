@@ -1,14 +1,10 @@
+package DaBest;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.applet.Applet;
-
-import java.applet.*; 
-import java.awt.event.*;
-import java.awt.image.*;
-import javax.imageio.*;
-import java.io.*;
-public class Asteroid 
+public class Asteroid extends Applet implements ActionListener
 
 {
     private int Ax=0;
@@ -16,24 +12,21 @@ public class Asteroid
     private int Xinc=1;
     private int Yinc=1;
 
-    public Asteroid( int x, int y){
-
-        Ax=x;
-        Ay=y;
-
+    public Asteroid(Graphics g, int x, int y){
+        g.drawRect(Ax,Ay,20,20);
+        Xinc=x;
+        Yinc=y;
     }
-
+    
     public void move()
     {
         if(collidesX() || collidesY()){
-            Xinc*=-1;
+            Xinc=0-Xinc;
         }
         Ax+=Xinc;
         Ay+=Yinc;
-
-        
+        repaint();
     }
-
 
     public void setX(int x){
         Xinc=x;
@@ -43,22 +36,13 @@ public class Asteroid
         Yinc=y;
     }
 
-    public int getX(){
-        return Ax;
-    }
-
-    public int getY(){
-        return Ay;
-    }
-
-
     private boolean collidesX(){
         if(Ax==0|| Ax==1000){
             return true;
         }
         return false;
     }
-
+    
     private boolean collidesY(){
         if(Ay==0 || Ay==1000){
             return true;
@@ -66,4 +50,7 @@ public class Asteroid
         return false;
     }
 
+    public void actionPerformed(ActionEvent e){
+        repaint();
+    }
 }

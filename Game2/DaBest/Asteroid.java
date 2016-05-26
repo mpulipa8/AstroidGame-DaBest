@@ -2,6 +2,11 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.applet.Applet;
+import java.applet.*; 
+import java.awt.event.*;
+import java.awt.image.*;
+import javax.imageio.*;
+import java.io.*;
 public class Asteroid extends Applet implements ActionListener
 
 {
@@ -10,8 +15,7 @@ public class Asteroid extends Applet implements ActionListener
     private int Xinc=1;
     private int Yinc=1;
 
-    public Asteroid(Graphics g, int x, int y){
-        g.drawRect(Ax,Ay,20,20);
+    public Asteroid(int x, int y){
         Xinc=x;
         Yinc=y;
     }
@@ -23,7 +27,6 @@ public class Asteroid extends Applet implements ActionListener
         }
         Ax+=Xinc;
         Ay+=Yinc;
-        repaint();
     }
 
     public void setX(int x){
@@ -33,7 +36,15 @@ public class Asteroid extends Applet implements ActionListener
     public void setY(int y){
         Yinc=y;
     }
-
+    
+    public int getX(){
+        return Ax;
+    }
+    
+    public int getY(){
+        return Ay ;
+    }
+    
     private boolean collidesX(){
         if(Ax==0|| Ax==1000){
             return true;

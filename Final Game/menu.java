@@ -24,7 +24,7 @@ public class menu extends JPanel
         }catch(IOException e){
         }
         try{
-            sss=ImageIO.read(new File("stars_texture2959.jpg"));
+            sss=ImageIO.read(new File("starfield.gif"));
         }catch(IOException e){
         }   
         g.drawImage(sss,0,0,this);
