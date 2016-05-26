@@ -7,24 +7,23 @@ import java.awt.event.*;
 import java.awt.image.*;
 import javax.imageio.*;
 import java.io.*;
-public class Asteroid
+public class Asteroid 
+
 {
     private int Ax=0;
     private int Ay=0;
     private int Xinc=1;
     private int Yinc=1;
 
-    public Asteroid(int x, int y,int locx,int locy){
+    public Asteroid(int x, int y){
         Xinc=x;
         Yinc=y;
-        Ax=locx;
-        Ay=locy;
     }
     
     public void move()
     {
         if(collidesX() || collidesY()){
-            Xinc=0-Xinc;
+            Xinc*=-1;
         }
         Ax+=Xinc;
         Ay+=Yinc;
@@ -59,4 +58,5 @@ public class Asteroid
         }
         return false;
     }
+
 }
