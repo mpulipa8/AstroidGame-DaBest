@@ -20,7 +20,7 @@ public class menu extends JPanel
         super.paintComponent(g);
 
         try{
-            ss=ImageIO.read(new File("Untitled-2.jpg"));
+            ss=ImageIO.read(new File("8TEjdMaGc.png"));
         }catch(IOException e){
         }
         try{
