@@ -339,7 +339,7 @@ public class Game  extends Applet implements ActionListener,KeyListener,MouseLis
             if(Math.abs(x-A8x)<=40 && Math.abs(y-A8y)<=40){
                 level=0;
             }
-           
+
             if(key==1){
                 if(w==0){
                     y+=10;
