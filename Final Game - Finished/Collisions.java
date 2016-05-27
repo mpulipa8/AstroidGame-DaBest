@@ -13,7 +13,7 @@ public class Collisions
         astX = ax;
         astY = ay;
     }
-    //Checks for a Game end
+    //Checks for a Game end the checks are a little more leinetn because we are not ncrementing by 1
     public boolean collides (){
         if(shipX<=astX && shipY>=astY){
             if(Math.abs(shipX-astX)<=40 && Math.abs(shipY-astY)<=65){

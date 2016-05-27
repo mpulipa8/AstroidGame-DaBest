@@ -66,7 +66,7 @@ public class FinalGame extends Applet implements ActionListener, KeyListener
     public void init()
     {
         //Starts TImer
-        timer = new Timer(10,this);
+        timer = new Timer(1,this);
         timer.start();
         
         //Movement using Keyboard
@@ -222,6 +222,7 @@ public class FinalGame extends Applet implements ActionListener, KeyListener
             //making Spaceship
             g.setColor(Color.BLUE);
             g.drawImage(ship1,space.getX(),space.getY(),this);
+            space.onscreen(space.getX(),space.getY());
 
             //Moving the SpaceShip
             if(key==1){
@@ -309,6 +310,7 @@ public class FinalGame extends Applet implements ActionListener, KeyListener
 
             //making Spaceship
             g.drawImage(ship1,space.getX(),space.getY(),this);
+            space.onscreen(space.getX(),space.getY());
 
             //Moving the SpaceShip
             if(key==1){

@@ -19,7 +19,7 @@ public class Spaceship
     
     public void setY(int Y)
     {
-        this.y=y;
+        this.y=Y;
     }
     
     public int getX()
@@ -61,7 +61,30 @@ public class Spaceship
     {
         y-=yinc;
     }
+    // Used to keep spaceship on screen
+    public void onscreen(int x, int y)
+    {
+        int temp=0;
+        
+        
+        if(x<=0)
+        {
+            setX(0);
+        }
+        else if(y>=925)
+        {
+            setY(925);
+        }
+        else if(y<=0)
+        {
+            setY(0);
+        }
+        else if(x>=925)
+        {
+            setX(925);
+        }
+        
     
-    
+    }
     
 }
